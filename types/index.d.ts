@@ -156,57 +156,6 @@ declare namespace PhonegapPluginPush {
 		}
 
 		/**
-		 * iOS specific initialization options.
-		 */
-		ios?: {
-			/**
-			 * If true|"true" the device sets the badge number on receipt of notification.
-			 * Default is false|"false".
-			 * Note: the value you set this option to the first time you call the init method will be how the application always acts.
-			 * Once this is set programmatically in the init method it can only be changed manually by the user in Settings>Notifications>App Name.
-			 * This is normal iOS behaviour.
-			 */
-			badge?: boolean | string
-			/**
-			 * If true|"true" the device plays a sound on receipt of notification.
-			 * Default is false|"false".
-			 * Note: the value you set this option to the first time you call the init method will be how the application always acts.
-			 * Once this is set programmatically in the init method it can only be changed manually by the user in Settings>Notifications>App Name.
-			 * This is normal iOS behaviour.
-			 */
-			sound?: boolean | string
-			/**
-			 * If true|"true" the device shows an alert on receipt of notification.
-			 * Default is false|"false".
-			 * Note: the value you set this option to the first time you call the init method will be how the application always acts.
-			 * Once this is set programmatically in the init method it can only be changed manually by the user in Settings>Notifications>App Name.
-			 * This is normal iOS behaviour.
-			 */
-			alert?: boolean | string
-			/**
-			 * If true|"true" the badge will be cleared on app startup. Default is false|"false".
-			 */
-			clearBadge?: boolean | string
-			/**
-			 * The data required in order to enable Action Buttons for iOS.
-			 * Action Buttons on iOS - https://github.com/phonegap/phonegap-plugin-push/blob/master/docs/PAYLOAD.md#action-buttons-1
-			 */
-			categories?: CategoryArray
-			/**
-			 * Maps to the project number in the Google Developer Console. Setting this uses GCM for notifications instead of native
-			 */
-			senderID?: string
-			/**
-			 * Whether to use prod or sandbox GCM setting. Defaults to false.
-			 */
-			fcmSandbox?: boolean
-			/**
-			 * If the array contains one or more strings each string will be used to subscribe to a GcmPubSub topic. Note: only usable in conjunction with senderID
-			 */
-			topics?: string[]
-		}
-
-		/**
 		 * Windows specific initialization options.
 		 */
 		windows?: {

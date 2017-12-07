@@ -16,7 +16,7 @@ var cordova = require('./helper/cordova'),
 
 describe('phonegap-plugin-push', function () {
   beforeEach(function () {
-    options = { android: {}, ios: {}, windows: {} };
+    options = { android: {}, windows: {} };
     execWin = jasmine.createSpy();
     execSpy = spyOn(cordova.required, 'cordova/exec').andCallFake(execWin);
   });
