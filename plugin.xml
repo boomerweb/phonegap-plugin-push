@@ -9,7 +9,6 @@
   <engines>
     <engine name="cordova" version=">=7.1.0"/>
     <engine name="cordova-android" version=">=6.3.0"/>
-    <engine name="cordova-ios" version=">=4.5.0"/>
   </engines>
   <platform name="android">
     <config-file target="res/xml/config.xml" parent="/*">
@@ -57,29 +56,6 @@
     </js-module>
     <asset src="src/browser/ServiceWorker.js" target="ServiceWorker.js"/>
     <asset src="src/browser/manifest.json" target="manifest.json"/>
-  </platform>
-  <platform name="ios">
-    <config-file target="config.xml" parent="/*">
-      <feature name="PushNotification">
-        <param name="ios-package" value="PushPlugin"/>
-      </feature>
-    </config-file>
-    <config-file target="*-Info.plist" parent="UIBackgroundModes">
-      <array>
-        <string>remote-notification</string>
-      </array>
-    </config-file>
-    <config-file target="*-Debug.plist" parent="aps-environment">
-      <string>development</string>
-    </config-file>
-    <config-file target="*-Release.plist" parent="aps-environment">
-      <string>production</string>
-    </config-file>
-    <source-file src="src/ios/AppDelegate+notification.m"/>
-    <source-file src="src/ios/PushPlugin.m"/>
-    <header-file src="src/ios/AppDelegate+notification.h"/>
-    <header-file src="src/ios/PushPlugin.h"/>
-    <framework src="FirebaseMessaging" type="podspec" spec="~> 2.0.0"/>
   </platform>
   <platform name="windows">
     <hook type="after_plugin_install" src="hooks/windows/setToastCapable.js"/>
